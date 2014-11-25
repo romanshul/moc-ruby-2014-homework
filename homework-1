@@ -1,0 +1,40 @@
+# all nonliving objects
+class Nonliving
+	# elasticity of object (0-inelastic or 1-elastic)
+	def elasticity
+		elasticity = 1
+	end
+	def width
+		width = 0
+	end
+	def heght
+		heght = 0
+	end
+	def deep
+		deep = 0
+	end
+		
+end
+
+# all living objects
+class living
+	# speed of object, by default = 0;
+	def speed
+		v = 0
+	end
+	# power of object (<0 >1)
+	def power
+		p = 1
+	end
+	# development of object
+	def level
+		level = 0;
+	end
+end
+
+# inhabitant will inheritance of living objects
+class inhabitant < living
+	def hobby
+		hobby = 'race'
+	end
+end
