@@ -30,7 +30,7 @@ RESPONSE='{"catalog": {
  
  class Array
     def each_pairwise
-    	self.each_with_index { | x, y |
+    	self.each { | x, y |
     		yield [y, x]
     	}
     end
@@ -38,7 +38,7 @@ end
 
 
 class GetFilm
-	def findfilm(*response_data)
+	def find(*response_data)
 		# p "#{response_data} --"
 		param = response_data.last
 		# catalogue = response_data.slice!(0..-2)
@@ -54,5 +54,5 @@ end
 # get name by star name or several parameters as array
 if response.key?("catalog")
 	find = GetFilm.new
-	find.findfilm(response.values, "Liam Neeson")
+	find.find(response.values, "Liam Neeson")
 end
