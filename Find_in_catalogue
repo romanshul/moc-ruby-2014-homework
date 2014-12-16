@@ -1,6 +1,6 @@
 # So, my task is find film by parameters
-require 'json'
 
+require 'json'
 RESPONSE='{"catalog": {
 			"Left Behind": {
 				"Writers": ["Jerry B. Jenkins", "Tim LaHaye"],
@@ -51,7 +51,7 @@ class GetFilm
 	end
 end
 
-# вывести по запросу значиния название фильма
+# get name by star name or several parameters as array
 if response.key?("catalog")
 	find = GetFilm.new
 	find.findfilm(response.values, "Liam Neeson")
