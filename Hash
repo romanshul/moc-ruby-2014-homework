@@ -1,0 +1,58 @@
+# So, my task is find film by parameters
+require 'json'
+
+RESPONSE='{"catalog": {
+			"Left Behind": {
+				"Writers": ["Jerry B. Jenkins", "Tim LaHaye"],
+				"Stars": ["Nicolas Cage", "Lea Thompson", "Cassi Thomson"],
+				"Director": "Vic Armstrong",
+				"theaters": ["Ukraine", "Big World"],
+				"description": "A small group of survivors are left behind after millions of people suddenly vanish and the world is plunged into chaos and destruction."
+				},
+			"Into the storm": {
+				"Writers": ["John Swetnam"],
+				"Stars": ["Richard Armitage", "Sarah Wayne Callies", "Matt Walsh"],
+				"Director": "Steven Quale",
+				"theaters": ["Ukraine", "Big World"],
+				"description": "Storm trackers, thrill-seekers, and everyday townspeople document an unprecedented onslaught of tornadoes touching down in the town of Silverton."
+				},
+			"Les Miserables": {
+				"Writers": ["Victor Hugo ", "Rafael Yglesias"],
+				"Stars": ["Liam Neeson", "Geoffrey Rush", "Uma Thurman"],
+				"Director": "Bille August",
+				"theaters": ["Ukraine", "Big World"],
+				"description": "Jean Valjean, a Frenchman imprisoned for stealing bread, must flee a police officer named Javert. "
+				}
+			
+		}}'
+
+ response = JSON.parse(RESPONSE)
+ 
+ class Array
+    def each_pairwise
+    	self.each_with_index { | x, y |
+    		yield [y, x]
+    	}
+    end
+end
+
+
+class GetFilm
+	def findfilm(*response_data)
+		# p "#{response_data} --"
+		param = response_data.last
+		# catalogue = response_data.slice!(0..-2)
+		catalogue = response_data.shift
+		# p catalogue.inspect
+		catalogue.each_pairwise { |x,y|
+			puts "#{x} => #{y}"
+			
+		}
+	end
+end
+
+# вывести по запросу значиния название фильма
+if response.key?("catalog")
+	find = GetFilm.new
+	find.findfilm(response.values, "Liam Neeson")
+end
