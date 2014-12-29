@@ -1,0 +1,31 @@
+{"catalog": {
+			"1": {
+				"title": "Left Behind",
+				"Writers": ["Jerry B. Jenkins", "Tim LaHaye"],
+				"Stars": ["Nicolas Cage", "Lea Thompson", "Cassi Thomson"],
+				"Director": "Vic Armstrong",
+				"theaters": ["Ukraine", "Big World"],
+				"time": "14",
+				"description": "A small group of survivors are left behind after millions of people suddenly vanish and the world is plunged into chaos and destruction."
+				},
+			"2": {
+				"title": "Into the storm",
+				"Writers": ["John Swetnam"],
+				"Stars": ["Richard Armitage", "Sarah Wayne Callies", "Matt Walsh"],
+				"Director": "Steven Quale",
+				"theaters": ["Ukraine", "Big World"],
+				"time": "15",
+				"description": "Storm trackers, thrill-seekers, and everyday townspeople document an unprecedented onslaught of tornadoes touching down in the town of Silverton."
+				},
+			"3": {
+				"title": "Les Miserables",
+				"Writers": ["Victor Hugo ", "Rafael Yglesias"],
+				"Stars": ["Liam Neeson", "Geoffrey Rush", "Uma Thurman"],
+				"Director": "Bille August",
+				"theaters": ["Ukraine", "Big World"],
+				"time": "15",
+				"description": "Jean Valjean, a Frenchman imprisoned for stealing bread, must flee a police officer named Javert. "
+				},
+			"4" : ["editional info", "time of creation", "name of admin"]
+			
+		}}
